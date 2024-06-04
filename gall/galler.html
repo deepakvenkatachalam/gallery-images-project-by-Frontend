@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE GALLERY</title>
+    <link rel="stylesheet" href="../gall/gall.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+        #image-gallery {
+            width: 35rem;
+            margin: 4rem auto;
+            text-align: center;
+        }
+        #main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        #thumbnail-container {
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+            justify-content: center;
+        }
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+        .gallery-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .gallery-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>image gallery</h2>
+    <div id="image-gallery">
+<img id="main-image" src="../gall/Screenshot 2024-03-27 192429.png" alt="image5">
+<div id="thumbnail-container">
+<img class="thumbnail" src="../gall/Screenshot 2024-03-27 192659.png" alt="image1">
+<img class="thumbnail"src="../gall/Screenshot 2024-03-27 192810.png" alt="image2">   
+<img class="thumbnail"src="../gall/Screenshot 2024-03-27 195324.png" alt="image3">
+<img class="thumbnail"src="../gall/Screenshot 2024-03-27 205213.png" alt="image4">
+<img class="thumbnail"src="../gall/Screenshot 2024-01-20 204630.png" alt="image5">
+<img class="thumbnail"src="../gall/Screenshot 2024-01-20 204753.png" alt="image6">
+<img class="thumbnail"src="../gall/Screenshot 2024-02-20 202427.png" alt="image7">
+<img class="thumbnail"src="../gall/Screenshot 2024-05-31 175315.png" alt="image8">
+<img class="thumbnail"src="../gall/Screenshot 2024-03-12 194403.png" alt="image9">
+
+</div>
+</div>
+  
+
+<script>
+
+    var thumbnails = document.querySelectorAll(".thumbnail") 
+    var mainImage = document.querySelector("#main-image") 
+    for (var i = 0; i < thumbnails.length; i++) {
+         thumbnails[i].addEventListener("click", function () { 
+            mainImage.src = this.src 
+        }) 
+    }
+    </script>
+
+</body>
+</html>
